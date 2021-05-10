@@ -82,7 +82,7 @@ async def on_message(message):
     if msg.startswith('$hello'):
         await message.channel.send('Hello!')
 
-    if msg.startswith('$'):
+    if msg.startswith('!'):
         recieved_msg = message.content
         print(recieved_msg)
         
@@ -98,4 +98,4 @@ async def on_message(message):
         await message.channel.send(quote1)
         print('meme send')
 
-client.run('ODM5NTM3OTA4MDYyNDg2NTY5.YJLGmw.BEoBkigrY2qKwETYntirTfIv_1M')
+client.run('')
