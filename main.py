@@ -44,8 +44,8 @@ math_talk_2 = [
 
 list_trainer = ListTrainer(my_bot)
 
-#for item in (small_talk, math_talk_1, math_talk_2):
-#    list_trainer.train(item)
+for item in (small_talk, math_talk_1, math_talk_2):
+    list_trainer.train(item)
 
 corpus_trainer = ChatterBotCorpusTrainer(my_bot)
 corpus_trainer.train('chatterbot.corpus.english')

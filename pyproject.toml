@@ -7,7 +7,6 @@ authors = ["Your Name <you@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.0.1"
-chatterbot-voice = "^0.1.5"
 
 [tool.poetry.dev-dependencies]
 
