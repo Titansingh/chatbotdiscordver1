@@ -8,7 +8,6 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 my_bot = ChatBot(
     name='Titan',
-    read_only=True,
     logic_adapters=['chatterbot.logic.MathematicalEvaluation', 'chatterbot.logic.BestMatch'])
 
 
@@ -71,4 +70,4 @@ async def on_message(message):
         await message.channel.send(quote1)
         print('meme send')
 
-client.run('')
+client.run('ODM5NTM3OTA4MDYyNDg2NTY5.YJLGmw.nO0Uz3UBEsPfeT2Ay7lwfuf8ZT4')
