@@ -1,28 +1,37 @@
 import discord
 import requests
 import json
+import random
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.trainers import UbuntuCorpusTrainer
 
 prabh = 745379486077288499
-prabhr = 'chala ja bsdk'
-lunatic = 785539923405963305
-lunaticr = 'Cry baby'
+yash = 694596381150806056
+
+
+badwords = ['chala ja bsdk',
+            'Aand mand ka tola abh tune message kiya toh tu bhen ka loda',
+            'Chaar Chawani ghode pe, yash mere lode pe',
+            'yash  hamara neta hai, sabh ko apni gaand deta hai',
+            'Oye bhsdk ke teri kah ke le lunga, aur Tera message teri hi gaand m de dunga']
 
 my_bot = ChatBot(
     name='Titan',
     logic_adapters=['chatterbot.logic.MathematicalEvaluation', 'chatterbot.logic.BestMatch'])
 
 
-
-
-
+#ubuntu_corpus_trainer = UbuntuCorpusTrainer(my_bot)
 corpus_trainer = ChatterBotCorpusTrainer(my_bot)
+
+#ubuntu_corpus_trainer.train()
 corpus_trainer.train(
     "chatterbot.corpus.english",
     "chatterbot.corpus.english.greetings",
     "chatterbot.corpus.english.conversations"
 )
+
+ 
 
 
 client = discord.Client()
@@ -53,8 +62,8 @@ async def on_message(message):
         return
 
     msg = message.content
-    if message.author.id == lunatic:
-        await message.channel.send(lunaticr)
+    if message.author.id == yash or prabh:
+        await message.channel.send(random.choice(badwords))
     
     else:
         
