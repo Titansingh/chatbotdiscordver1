@@ -4,7 +4,10 @@ import json
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
-
+prabh = 745379486077288499
+prabhr = 'chala ja bsdk'
+lunatic = 785539923405963305
+lunaticr = 'Cry baby'
 
 my_bot = ChatBot(
     name='Titan',
@@ -50,24 +53,29 @@ async def on_message(message):
         return
 
     msg = message.content
-
-    if msg.startswith('$hello'):
-        await message.channel.send('Hello!')
-
-    if msg.startswith('!'):
-        recieved_msg = message.content
-        print(recieved_msg)
-        
-        await message.channel.send(my_bot.get_response(recieved_msg[1:]))
+    if message.author.id == lunatic:
+        await message.channel.send(lunaticr)
+    
+    else:
         
 
-    if msg.startswith('$inspire'):
-        quote = get_quote()
-        await message.channel.send(quote)
-        print('quote send')
-    if msg.startswith('$meme'):
-        quote1 = get_meme()
-        await message.channel.send(quote1)
-        print('meme send')
+        if msg.startswith('$hello'):
+            await message.channel.send('Hello!')
 
-client.run('ODM5NTM3OTA4MDYyNDg2NTY5.YJLGmw.nO0Uz3UBEsPfeT2Ay7lwfuf8ZT4')
+        if msg.startswith('!'):
+            recieved_msg = message.content
+            print(recieved_msg)
+            
+            await message.channel.send(my_bot.get_response(recieved_msg[1:]))
+            
+
+        if msg.startswith('$inspire'):
+            quote = get_quote()
+            await message.channel.send(quote)
+            print('quote send')
+        if msg.startswith('$meme'):
+            quote1 = get_meme()
+            await message.channel.send(quote1)
+            print('meme send')
+
+client.run('')
