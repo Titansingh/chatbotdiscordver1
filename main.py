@@ -88,4 +88,4 @@ async def on_message(message):
             await message.channel.send(quote1)
             print('meme send')
 
-client.run('')
+client.run('ODM5NTM3OTA4MDYyNDg2NTY5.YJLGmw.RuzaSy7yUS_54MCd8ttXJw3QlV0')
