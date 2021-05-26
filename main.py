@@ -10,6 +10,7 @@ prabh = 745379486077288499
 yash = 694596381150806056
 
 
+
 badwords = ['chala ja bsdk',
             'Aand mand ka tola abh tune message kiya toh tu bhen ka loda',
             'Chaar Chawani ghode pe, yash mere lode pe',
@@ -62,7 +63,7 @@ async def on_message(message):
         return
 
     msg = message.content
-    if message.author.id == yash or prabh:
+    if message.author.id == (yash or prabh):
         await message.channel.send(random.choice(badwords))
     
     else:
